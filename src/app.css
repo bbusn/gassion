@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+    *::selection {
+        @apply bg-secondary-200 text-primary;
+    }
+
+    @font-face {
+        font-family: 'Le-Murmure';
+        src: url('/fonts/Le_Murmure-Regular_web.woff2') format('woff2'),
+                url('/fonts/Le_Murmure-Regular_web.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'LiberationSans';
+        src: url('/fonts/LiberationSans-Regular.woff2') format('woff2'),
+                url('/fonts/LiberationSans-Regular.woff') format('woff');
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
+@layer components {
+    .link {
+        @apply text-primary font-primary transition-all duration-300 hover:bg-secondary-200 hover:transition-all hover:duration-300 active:text-gray-700 active:transition-all active:duration-300 active:scale-95;
+    }
+}
