@@ -1,0 +1,39 @@
+{
+    "nav": {
+        "about_me": "à propos",
+        "projects": "projets",
+        "contact": "contact",
+        "services": "services"
+    },
+    "errors": {
+        "404": {
+            "title": "Page non trouvée",
+            "message": "Désolé, la page que vous recherchez n'existe pas."
+        },
+        "500": {
+            "title": "Erreur interne du serveur",
+            "message": "Désolé, une erreur s'est produite. Veuillez réessayer plus tard."
+        }
+    },
+    "home": {
+        "title": "Design Graphique"
+    },
+    "about_me": {
+        "title": "À propos"
+    },
+    "contact": {
+        "title": "Contact"
+    },
+    "services": {
+        "title": "Services"
+    },
+    "projects": {
+        "title": "Projets"
+    },
+    "projects_list": {
+        "prout": {
+            "title": "Prout",
+            "description": "Prout est un projet que j'ai réalisé pour le plaisir. C'est un site web simple qui affiche une image aléatoire de chat à chaque fois que vous cliquez sur le bouton. Le site est construit avec React et utilise l'API Cat pour récupérer les images. Le projet est open source et vous pouvez trouver le code sur GitHub."
+        }
+    }
+}  
