@@ -1,4 +1,4 @@
-import { init, register, locale as i18nLocale, t } from 'svelte-i18n';
+import { init, register, locale, t } from 'svelte-i18n';
 
 register('en', () => import('./locales/en.json'));
 register('fr', () => import('./locales/fr.json'));
@@ -17,9 +17,7 @@ init({
     fallbackLocale: 'en',
     initialLocale,
 });
+
+locale.set(initialLocale);
   
-i18nLocale.set(initialLocale);
-
-export const locale = i18nLocale;
-
-export { t };
+export { t, locale };
