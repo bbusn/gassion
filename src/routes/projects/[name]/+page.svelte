@@ -1,22 +1,32 @@
 <script lang="ts">
     import { page } from '$app/state';
-	import { t } from '../../../lib/i18n';
+    import { t } from '../../../lib/i18n';
+    import { afterNavigate } from '$app/navigation'; 
+    
     const { name } = page.params;
 
     const keyExists = (key: string): boolean => {
-        return $t(key) != key;
+        return $t(key) !== key;
     };
 
-    let title = $state($t('projects_list.' + name + '.title') ?? $t('errors.404.title'));
 
-    $effect(() => {
-        if (keyExists('projects_list.' + name + '.title')) {
-            title = $t('projects_list.' + name + '.title');
-        } else {
-            //Redirect to 404
-        }
+    afterNavigate(() => {
+        titleKeyExist = keyExists('projects_list.' + page.params.name + '.title');
     });
-   
+
+    let titleKeyExist = $state(keyExists('projects_list.' + page.params.name + '.title'));
 </script>
 
-<h1 class="uppercase text-4xl font-primary">{title}</h1>
+<div class="px-8 sm:px-12 lg:px-24 w-full flex flex-col justify-start items-start gap-6">
+    <h1 class="uppercase text-6xl font-primary">
+        {titleKeyExist ? 
+            $t('projects_list.' + page.params.name + '.title') : 
+            $t('errors.404.title')}
+    </h1>
+    <hr class="bg-black h-[1px] w-full" />
+    {#if titleKeyExist}
+        <p>{$t('projects_list.' + page.params.name + '.description')}</p>
+    {:else}
+        <p>{$t('errors.404.message')}</p>
+    {/if}
+</div>

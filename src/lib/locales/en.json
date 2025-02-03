@@ -31,9 +31,9 @@
         "title": "Projects"
     },
     "projects_list": {
-        "prout": {
-            "title": "Prout",
-            "description": "Prout is a project I created for fun. It is a simple website that displays a random cat image every time you click the button. The site is built with React and uses the Cat API to fetch the images. The project is open source and you can find the code on GitHub."
+        "test": {
+            "title": "Test",
+            "description": "Test is a project I created for fun. It is a simple website that displays a random cat image every time you click the button. The site is built with React and uses the Cat API to fetch the images. The project is open source and you can find the code on GitHub."
         }
     }
 }
