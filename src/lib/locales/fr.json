@@ -16,7 +16,19 @@
         }
     },
     "home": {
-        "title": "Design Graphique"
+        "title": "Design Graphique",
+        "sections": {
+            "1": {
+                "title": "À propos",
+                "paragraphs" : {
+                    "1": "FRENCH Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab!  Libero illum corrupti totam asperiores eaque. Ratione, delectus aperiam? Hic dignissimos earum voluptates totam quis autem. Aut, repellat sequi. Quod, rem dolorem.",
+                    "2": "FRENCH Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ut aspernatur quidem totam, sunt eum?"
+                }
+            },
+            "2": {
+                "title": "Projets"
+            }
+        }
     },
     "about_me": {
         "title": "À propos"
