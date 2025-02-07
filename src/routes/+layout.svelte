@@ -26,9 +26,9 @@
 	});
 </script>
 
-<main class="bg-white min-h-screen w-screen overflow-x-hidden overflow-y-auto flex flex-col items-center justify-start">
-	<header class="opacity-0 px-6 sm:px-10 lg:px-20  w-full py-4 sm:py-10 flex items-start justify-between h-28">
-		<a class="link uppercase text-4xl flex items-center justify-center" href="/">
+<main class="pt-2 pb-24 bg-white min-h-screen max-w-screen overflow-x-hidden overflow-y-auto flex flex-col items-center justify-start gap-4">
+	<header class="opacity-0 px-6 lg:px-8  w-full py-2 lg:py-4 flex items-start justify-between h-28">
+		<a class="link uppercase text-6xl flex items-center justify-center" href="/">
 			<p>Quentin</p>
 		</a>
 		<div class="flex justify-start items-center flex-col gap-2">

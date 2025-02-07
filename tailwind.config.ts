@@ -18,6 +18,7 @@ export default {
           400: '#A3A3A3',
           500: '#4D4D4D',
         },
+        squeleton: "#D9D9D9"
       },
     }
   },

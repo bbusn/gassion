@@ -18,12 +18,12 @@
 </script>
 
 <div class="px-8 sm:px-12 lg:px-24 w-full flex flex-col justify-start items-start gap-6">
-    <h1 class="uppercase text-6xl font-primary">
+    <h1>
         {titleKeyExist ? 
             $t('projects_list.' + page.params.name + '.title') : 
             $t('errors.404.title')}
     </h1>
-    <hr class="bg-black h-[1px] w-full" />
+    <hr />
     {#if titleKeyExist}
         <p>{$t('projects_list.' + page.params.name + '.description')}</p>
     {:else}

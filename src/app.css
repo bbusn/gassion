@@ -3,6 +3,32 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+    body {
+        --sb-track-color: #ffffff;
+        --sb-thumb-color: #ababab;
+        --sb-size: 8px;
+    }
+    
+    body::-webkit-scrollbar {
+    width: var(--sb-size);
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: var(--sb-track-color);
+        border-radius: 1px;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: var(--sb-thumb-color);
+        border-radius: 1px;
+    }
+    
+    @supports not selector(::-webkit-scrollbar) {
+        body {
+            scrollbar-color: var(--sb-thumb-color)
+                            var(--sb-track-color);
+        }
+    }
     *::selection {
         @apply bg-secondary-200 text-primary;
     }
@@ -26,6 +52,21 @@
 
 @layer components {
     .link {
-        @apply text-primary font-primary transition-all duration-300 hover:bg-secondary-200 hover:transition-all hover:duration-300 active:text-gray-700 active:transition-all active:duration-300 active:scale-95;
+        @apply cursor-pointer text-primary font-primary transition-all duration-300 hover:underline underline-offset-4 hover:transition-all hover:duration-300 active:text-gray-700 active:transition-all active:duration-300 active:scale-95;
+    }
+    h1 {
+        @apply uppercase text-7xl font-primary;
+    }
+    h2 {
+        @apply uppercase text-4xl font-primary;
+    }
+    hr {
+        @apply bg-black h-[1.5px] w-[99.5%];
+    }
+    .project-card {
+        @apply w-full cursor-pointer bg-squeleton transition-all duration-500 hover:z-10 active:scale-95 hover:-translate-y-4 hover:brightness-105 hover:transition-all hover:duration-500;
+    }
+    .project-card:hover {
+        transform: rotateX('35deg')²;
     }
 }
