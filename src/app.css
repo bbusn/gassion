@@ -105,6 +105,6 @@
         @apply opacity-0 translate-y-[50px];
     }
     .project-image {
-        @apply transition-all duration-300 cursor-pointer hover:duration-300 hover:transition-all hover:grayscale-0 grayscale;
+        @apply transition-all duration-300 cursor-pointer hover:duration-300 hover:transition-all sm:hover:grayscale-0 grayscale;
     }
 }
