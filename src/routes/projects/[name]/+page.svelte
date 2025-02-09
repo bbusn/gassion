@@ -101,7 +101,7 @@
             {#if data.images}  
                 {#each Object.keys(data.images) as key}
                     <div class="flex flex-col justify-start items-center gap-3">
-                        <img class="project-image rounded-sm object-cover w-full sm:w-auto" src={data.images[key].src} alt={data.images[key].alt} height={data.images[key].height} width={data.images[key].width} />
+                        <img class="project-image rounded-sm object-cover w-[80vw] sm:w-auto" src={data.images[key].src} alt={data.images[key].alt} height={data.images[key].height} width={data.images[key].width} />
                         {#if data.images[key].description}
                             <p class="text-center italic">{data.images[key].description}</p>
                         {/if}
