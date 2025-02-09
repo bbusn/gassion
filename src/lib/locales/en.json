@@ -5,15 +5,42 @@
     "header": {
         "title": "QUENTIN",
         "navigation": {
-            "about_me": "about me",
-            "projects": "projects",
-            "contact": "contact"
+            "1": "about",
+            "2": "projects",
+            "3": "contact"
         }
     },
     "footer": {
         "title": {
             "1": "CREATION",
-            "2": "DESIGN"
+            "2": "GRAPHIC DESIGN"
+        },
+        "sections": {
+            "1": {
+                "title": "SERVICES",
+                "paragraphs": {
+                    "1": "GRAPHIC IDENTITY",
+                    "2": "PHOTOGRAPHY",
+                    "3": "COVER CREATION",
+                    "4": "OVERALL ARTISTIC DIRECTION",
+                    "5": "VIDEO EDITING"
+                }
+            },
+            "2": {
+                "title": "CONTACT",
+                "paragraphs": {
+                    "1": "GASSION.QUENTINPRO@GMAIL.COM"
+                }
+            },
+            "3": {
+                "title": "SOCIAL",
+                "paragraphs": {
+                    "1": "LINKEDIN",
+                    "2": "https://www.linkedin.com/in/quentin-gassion-50469b254/",
+                    "3": "INSTAGRAM",
+                    "4": "https://www.instagram.com/gxquentin"
+                }
+            }
         }
     },
     "home": {
@@ -25,8 +52,8 @@
             "1": {
                 "title": "ABOUT",
                 "paragraphs" : {
-                    "1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab!  Libero illum corrupti totam asperiores eaque. Ratione, delectus aperiam? Hic dignissimos earum voluptates totam quis autem. Aut, repellat sequi. Quod, rem dolorem.",
-                    "2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ut aspernatur quidem totam, sunt eum?"
+                    "1": "FRENCH Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab!  Libero illum corrupti totam asperiores eaque. Ratione, delectus aperiam? Hic dignissimos earum voluptates totam quis autem. Aut, repellat sequi. Quod, rem dolorem.",
+                    "2": "FRENCH Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ut aspernatur quidem totam, sunt eum?"
                 }
             },
             "2": {
@@ -39,25 +66,57 @@
         "meta": {
             "title": "About"
         },
-        "title": "ABOUT"
+        "title": "ABOUT",
+        "sections": {
+            "1": {
+                "title": "QUENTIN GASSION",
+                "paragraphs" : {
+                    "1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                }
+            }
+        }
     },
     "contact": {
         "meta": {
             "title": "Contact"
         },
-        "title": "CONTACT"
+        "title": "CONTACT ME",
+        "sections": {
+            "1": {
+                "paragraphs" : {
+                    "1": "Do you have a project in mind or need specific services?",
+                    "2": "Whether it's for a collaboration, a freelance mission, or any other request, I'm available to discuss it."
+
+                }
+            },
+            "2": {
+                "title": "EMAIL",
+                "paragraphs" : {
+                    "1": "GASSION.QUENTINPRO@GMAIL.COM"
+                }
+            },
+            "3": {
+                "title": "SOCIAL NETWORKS",
+                "paragraphs" : {
+                    "1": "quentin-gassion-50469b254",
+                    "2": "https://www.linkedin.com/in/quentin-gassion-50469b254/",
+                    "3": "@gxquentin",
+                    "4": "https://www.instagram.com/gxquentin"
+                }
+            }
+        }
     },
     "projects": {
         "meta": {
-            "title": "Projects"
+            "title": "Project Gallery"
         },
-        "title": "PROJECTS",
+        "title": "PROJECT GALLERY",
         "1": {
             "meta": {
                 "title": "1"
             },
             "title": "1",
-            "description": "1 is a project I created for fun. It is a simple website that displays a random cat image every time you click the button. The site is built with React and uses the Cat API to fetch the images. The project is open source and you can find the code on GitHub."
+            "description": "FRENCH 1 is a project I created for fun. It is a simple website that displays a random cat image every time you click the button. The site is built with React and uses the Cat API to fetch the images. The project is open source and you can find the code on GitHub."
         }
     },
     "errors": {
