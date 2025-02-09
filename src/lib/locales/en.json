@@ -1,52 +1,79 @@
 {
-    "nav": {
-        "about_me": "about me",
-        "projects": "projects",
-        "contact": "contact",
-        "services": "services"
+    "meta": {
+        "title": "Quentin Gassion"
     },
-    "errors": {
-        "404": {
-            "title": "Page not found",
-            "message": "Sorry, the page you are looking for does not exist."
-        },
-        "500": {
-            "title": "Internal server error",
-            "message": "Sorry, something went wrong. Please try again later."
+    "header": {
+        "title": "QUENTIN",
+        "navigation": {
+            "about_me": "about me",
+            "projects": "projects",
+            "contact": "contact"
+        }
+    },
+    "footer": {
+        "title": {
+            "1": "CREATION",
+            "2": "DESIGN"
         }
     },
     "home": {
-        
-        "title": "Graphic Design",
+        "meta": {
+            "title": "Graphic Design"
+        },
+        "title": "GRAPHIC DESIGN",
         "sections": {
             "1": {
-                "title": "About me",
+                "title": "ABOUT",
                 "paragraphs" : {
                     "1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab!  Libero illum corrupti totam asperiores eaque. Ratione, delectus aperiam? Hic dignissimos earum voluptates totam quis autem. Aut, repellat sequi. Quod, rem dolorem.",
                     "2": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ut aspernatur quidem totam, sunt eum?"
                 }
             },
             "2": {
-                "title": "Projects"
+                "title": "PROJECTS",
+                "see_more": "MORE PROJECTS"
             }
         }
     },
     "about_me": {
-        "title": "About me"
+        "meta": {
+            "title": "About"
+        },
+        "title": "ABOUT"
     },
     "contact": {
-        "title": "Contact"
-    },
-    "services": {
-        "title": "Services"
+        "meta": {
+            "title": "Contact"
+        },
+        "title": "CONTACT"
     },
     "projects": {
-        "title": "Projects"
+        "meta": {
+            "title": "Projects"
+        },
+        "title": "PROJECTS",
+        "1": {
+            "meta": {
+                "title": "1"
+            },
+            "title": "1",
+            "description": "1 is a project I created for fun. It is a simple website that displays a random cat image every time you click the button. The site is built with React and uses the Cat API to fetch the images. The project is open source and you can find the code on GitHub."
+        }
     },
-    "projects_list": {
-        "test": {
-            "title": "Test",
-            "description": "Test is a project I created for fun. It is a simple website that displays a random cat image every time you click the button. The site is built with React and uses the Cat API to fetch the images. The project is open source and you can find the code on GitHub."
+    "errors": {
+        "404": {
+            "meta": {
+                "title": "Page not found"
+            },
+            "title": "PAGE NOT FOUND",
+            "message": "Sorry, the page you are looking for does not exist."
+        },
+        "500": {
+            "meta": {
+                "title": "Internal error"
+            },
+            "title": "INTERNAL ERROR",
+            "message": "Sorry, an error occurred. Please try again later."
         }
     }
 }

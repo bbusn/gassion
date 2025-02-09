@@ -1,51 +1,138 @@
 {
-    "nav": {
-        "about_me": "à propos",
-        "projects": "projets",
-        "contact": "contact",
-        "services": "services"
+    "meta": {
+        "title": "Quentin Gassion"
     },
-    "errors": {
-        "404": {
-            "title": "Page non trouvée",
-            "message": "Désolé, la page que vous recherchez n'existe pas."
+    "header": {
+        "title": "QUENTIN",
+        "navigation": {
+            "1": "à propos",
+            "2": "projets",
+            "3": "contact"
+        }
+    },
+    "footer": {
+        "title": {
+            "1": "CRÉATION",
+            "2": "GRAPHISME"
         },
-        "500": {
-            "title": "Erreur interne du serveur",
-            "message": "Désolé, une erreur s'est produite. Veuillez réessayer plus tard."
+        "sections": {
+            "1": {
+                "title": "SERVICES",
+                "paragraphs": {
+                    "1": "IDENTITÉ GRAPHIQUE",
+                    "2": "PHOTOGRAPHIE",
+                    "3": "CRÉATION DE COVER",
+                    "4": "DIRECTION ARTISTIQUE GLOBALE",
+                    "5": "MONTAGE VIDÉO"
+                }
+            },
+            "2": {
+                "title": "CONTACT",
+                "paragraphs": {
+                    "1": "GASSION.QUENTINPRO@GMAIL.COM"
+                }
+            },
+            "3": {
+                "title": "SOCIAL",
+                "paragraphs": {
+                    "1": "LINKEDIN",
+                    "2": "https://www.linkedin.com/in/quentin-gassion-50469b254/",
+                    "3": "INSTAGRAM",
+                    "4": "https://www.instagram.com/gxquentin"
+                }
+            }
         }
     },
     "home": {
-        "title": "Design Graphique",
+        "meta": {
+            "title": "Design graphique"
+        },
+        "title": "DESIGN GRAPHIQUE",
         "sections": {
             "1": {
-                "title": "À propos",
+                "title": "À PROPOS",
                 "paragraphs" : {
                     "1": "FRENCH Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab!  Libero illum corrupti totam asperiores eaque. Ratione, delectus aperiam? Hic dignissimos earum voluptates totam quis autem. Aut, repellat sequi. Quod, rem dolorem.",
                     "2": "FRENCH Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ut aspernatur quidem totam, sunt eum?"
                 }
             },
             "2": {
-                "title": "Projets"
+                "title": "PROJETS",
+                "see_more": "PLUS DE PROJETS"
             }
         }
     },
     "about_me": {
-        "title": "À propos"
+        "meta": {
+            "title": "À propos"
+        },
+        "title": "À PROPOS",
+        "sections": {
+            "1": {
+                "title": "QUENTIN GASSION",
+                "paragraphs" : {
+                    "1": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto. Lorem ipsum dolor sit amet consectetur adipisicing elit."
+                }
+            }
+        }
     },
     "contact": {
-        "title": "Contact"
-    },
-    "services": {
-        "title": "Services"
+        "meta": {
+            "title": "Contact"
+        },
+        "title": "CONTACTEZ-MOI",
+        "sections": {
+            "1": {
+                "paragraphs" : {
+                    "1": "Vous avez un projet en tête ou besoin de services spécifiques ?",
+                    "2": "Que ce soit pour une collaboration, une mission freelance ou toute autre demande, je suis disponible pour en discuter."
+
+                }
+            },
+            "2": {
+                "title": "EMAIL",
+                "paragraphs" : {
+                    "1": "GASSION.QUENTINPRO@GMAIL.COM"
+                }
+            },
+            "3": {
+                "title": "RÉSEAUX SOCIAUX",
+                "paragraphs" : {
+                    "1": "LINKEDIN",
+                    "2": "https://www.linkedin.com/in/quentin-gassion-50469b254/",
+                    "3": "INSTAGRAM",
+                    "4": "https://www.instagram.com/gxquentin"
+                }
+            }
+        }
     },
     "projects": {
-        "title": "Projets"
+        "meta": {
+            "title": "Galerie de projets"
+        },
+        "title": "GALERIE DE PROJETS",
+        "1": {
+            "meta": {
+                "title": "1"
+            },
+            "title": "1",
+            "description": "FRENCH 1 is a project I created for fun. It is a simple website that displays a random cat image every time you click the button. The site is built with React and uses the Cat API to fetch the images. The project is open source and you can find the code on GitHub."
+        }
     },
-    "projects_list": {
-        "test": {
-            "title": "Test",
-            "description": "Test is a project I created for fun. It is a simple website that displays a random cat image every time you click the button. The site is built with React and uses the Cat API to fetch the images. The project is open source and you can find the code on GitHub."
+    "errors": {
+        "404": {
+            "meta": {
+                "title": "Page non trouvée"
+            },
+            "title": "PAGE NON TROUVÉE",
+            "message": "Désolé, la page que vous recherchez n'existe pas."
+        },
+        "500": {
+            "meta": {
+                "title": "Erreur interne"
+            },
+            "title": "ERREUR INTERNE",
+            "message": "Désolé, une erreur s'est produite. Veuillez réessayer plus tard."
         }
     }
 }  

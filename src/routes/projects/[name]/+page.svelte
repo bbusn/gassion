@@ -11,21 +11,21 @@
 
 
     afterNavigate(() => {
-        titleKeyExist = keyExists('projects_list.' + page.params.name + '.title');
+        titleKeyExist = keyExists('projects.' + page.params.name + '.meta.title');
     });
 
-    let titleKeyExist = $state(keyExists('projects_list.' + page.params.name + '.title'));
+    let titleKeyExist = $state(keyExists('projects.' + page.params.name + '.meta.title'));
 </script>
 
 <div class="px-8 sm:px-12 lg:px-24 w-full flex flex-col justify-start items-start gap-6">
     <h1>
         {titleKeyExist ? 
-            $t('projects_list.' + page.params.name + '.title') : 
+            $t('projects.' + page.params.name + '.title') : 
             $t('errors.404.title')}
     </h1>
     <hr />
     {#if titleKeyExist}
-        <p>{$t('projects_list.' + page.params.name + '.description')}</p>
+        <p>{$t('projects.' + page.params.name + '.description')}</p>
     {:else}
         <p>{$t('errors.404.message')}</p>
     {/if}
