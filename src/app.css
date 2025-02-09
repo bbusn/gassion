@@ -77,6 +77,11 @@
     .footer-name {
         @apply leading-none text-4xl font-primary sm:w-24;
     }
+    .footer-title {
+        opacity: 0;
+        transform: scale(0);
+        will-change: opacity, transform;
+    }
     h1 {
         opacity: 0;
         transform: translateY(-50px);
@@ -90,8 +95,7 @@
         @apply bg-black h-[1.5px] w-[99.5%];
     }
     .project-card {
-        filter: grayscale(100%);
-        @apply scale-100 lg:max-w-[430px] w-full cursor-pointer bg-squeleton-400 transition-all duration-200 hover:duration-200 hover:transition-all;
+        @apply sm:grayscale scale-100 lg:max-w-[430px] w-full cursor-pointer bg-squeleton-400 transition-all duration-200 hover:duration-200 hover:transition-all;
     }
     .project-card img {
         @apply transition-all duration-200 hover:duration-200 hover:transition-all;
@@ -100,6 +104,6 @@
         @apply opacity-0 translate-y-[50px];
     }
     .project-image {
-        @apply transition-all duration-300 cursor-pointer hover:duration-300 hover:transition-all hover:grayscale-0 grayscale;
+        @apply transition-all duration-300 cursor-pointer hover:duration-300 hover:transition-all sm:hover:grayscale-0 sm:grayscale;
     }
 }

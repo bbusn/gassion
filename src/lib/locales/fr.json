@@ -107,6 +107,7 @@
         }
     },
     "projects": {
+        "loading": "Veuillez patienter, le projet est en cours de chargement...",
         "meta": {
             "title": "Projets"
         },

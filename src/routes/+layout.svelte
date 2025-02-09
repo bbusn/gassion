@@ -42,9 +42,8 @@
 		const footer = document.querySelector("footer") as HTMLElement;
 		const header = document.querySelector("header") as HTMLElement;
 		const footerTitles = document.querySelectorAll(".footer-title") as NodeListOf<HTMLElement>;
-		const footerSections = document.querySelectorAll(".footer-section") as NodeListOf<HTMLElement>;
-		const footerSectionTrigger = document.querySelector(".footer-section-trigger") as HTMLElement;
-		
+		const footerSections = document.querySelector(".footer-sections") as HTMLElement;
+
 		const headerObserver = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 			if (entry.isIntersecting) {
@@ -61,37 +60,22 @@
 		const footerObserver = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
 			if (entry.isIntersecting) {
-				gsap.fromTo(header, 
-				{ opacity: 0, y: -50 }, 
-				{ opacity: 1, y: 0, duration: 1 }
-				);
-			
 				footerTitles.forEach((title, index) => {
 					gsap.fromTo(title, 
-					{ opacity: 0, scale: 0.5 }, 
+					{ opacity: 0, scale: 0 }, 
 					{ opacity: 1, scale: 1, duration: 1, delay: index * 0.2 }
+					);
+					gsap.fromTo(footerSections, 
+					{ opacity: 0, y: 100 }, 
+					{ opacity: 1, y: 0, duration: 1, delay: 0.6 }
 					);
 				});
 			}
 			});
-		}, { threshold: 0.1 });
+		}, { threshold: 0 });
 
 		footerObserver.observe(footer);
 
-		const footerSectionsObserver = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				footerSections.forEach((section, index) => {
-					gsap.fromTo(section, 
-					{ opacity: 0, y: 50 }, 
-					{ opacity: 1, y: 0, duration: 1, delay: index * 0.4 }
-					);
-				});
-			}
-			});
-		}, { threshold: 0.1 });
-
-		footerSectionsObserver.observe(footerSectionTrigger);
         
         const crossElements = document.querySelectorAll('.cross') as NodeListOf<HTMLImageElement>;
         crossElements.forEach((cross) => {
@@ -129,49 +113,51 @@
 	<footer class="px-6 sm:px-8 lg:px-14 xl:max-w-[1500px] w-full my-8 sm:my-6 flex flex-col justify-start items-center py-6 lg:py-8 gap-10 2xl:gap-12">
 		<hr />
 		<div class="w-full flex justify-center sm:justify-between 2xl:justify-between items-center flex-wrap gap-5 sm:gap-0">
-			<p class="opacity-0 scale-50 footer-title leading-none text-8.5xl 2xs:text-10xl xs:text-12xl sm:text-8xl sm-md:text-8.5xl md:text-9xl md-lg:text-10xl lg:text-12xl xl:text-13xl 2xl:text-15xl font-primary">
+			<p class="footer-title leading-none text-8.5xl 2xs:text-10xl xs:text-12xl sm:text-8xl sm-md:text-8.5xl md:text-9xl md-lg:text-10xl lg:text-12xl xl:text-13xl 2xl:text-15xl font-primary">
 				{$t('footer.title.1')}
 			</p>
 			<div class="flex justify-center items-center w-28 xs:w-48 sm:w-9 md:w-11 md-lg:w-12 lg:w-14 xl:w-16">
 				<img draggable="false" src="/images/cross.svg" class="cross w-9 2xs:w-10 xs:w-12 sm:w-9 md:w-11 md-lg:w-12 lg:w-14 xl:w-16 object-contain select-none transition-all duration-700" alt="" />
 			</div>
-			<p class="opacity-0 scale-50 footer-title text-8xl 2xs:text-8.5xl xs:text-10xl sm:text-8xl sm-md:text-8.5xl md:text-9xl md-lg:text-10xl lg:text-12xl xl:text-13xl 2xl:text-15xl font-primary">
+			<p class="footer-title text-8xl 2xs:text-8.5xl xs:text-10xl sm:text-8xl sm-md:text-8.5xl md:text-9xl md-lg:text-10xl lg:text-12xl xl:text-13xl 2xl:text-15xl font-primary">
 				{$t('footer.title.2')}
 			</p>
 		</div>
-		<hr class="footer-section-trigger" />
-		<div class="footer-section w-full flex flex-col sm:flex-row gap-4 justify-between items-center">
-			<p class="footer-name">
-				{$t('footer.sections.1.title')}
-			</p>
-			<img draggable="false" src="/images/arrow_sm.svg" class="rotate-90 sm:rotate-0 w-6 object-contain select-none transition-all duration-300" alt="" />
-			<div class="sm:w-80 flex flex-col justify-center items-center sm:items-end">
-				<p>{$t('footer.sections.1.paragraphs.1')}</p>
-				<p>{$t('footer.sections.1.paragraphs.2')}</p>
-				<p>{$t('footer.sections.1.paragraphs.3')}</p>
-				<p>{$t('footer.sections.1.paragraphs.4')}</p>
-				<p>{$t('footer.sections.1.paragraphs.5')}</p>
-			</div>
-		</div>
 		<hr />
-		<div class="footer-section w-full flex flex-col sm:flex-row gap-4 justify-between items-center">
-			<p class="footer-name">
-				{$t('footer.sections.2.title')}
-			</p>
-			<img draggable="false" src="/images/arrow_sm.svg" class="rotate-90 sm:rotate-0 w-6 object-contain select-none transition-all duration-300" alt="" />
-			<div class="sm:w-80 flex flex-col justify-center items-center sm:items-end">
-				<a class="footer-link longer" href={`mailto:${$t('footer.sections.2.paragraphs.1').toLowerCase()}`}>{$t('footer.sections.2.paragraphs.1')}</a>
+		<div class="footer-sections flex flex-col justify-center items-center w-full gap-8 h-full">
+			<div class="w-full flex flex-col sm:flex-row gap-4 justify-between items-center">
+				<p class="footer-name">
+					{$t('footer.sections.1.title')}
+				</p>
+				<img draggable="false" src="/images/arrow_sm.svg" class="rotate-90 sm:rotate-0 w-6 object-contain select-none transition-all duration-300" alt="" />
+				<div class="sm:w-80 flex flex-col justify-center items-center sm:items-end">
+					<p>{$t('footer.sections.1.paragraphs.1')}</p>
+					<p>{$t('footer.sections.1.paragraphs.2')}</p>
+					<p>{$t('footer.sections.1.paragraphs.3')}</p>
+					<p>{$t('footer.sections.1.paragraphs.4')}</p>
+					<p>{$t('footer.sections.1.paragraphs.5')}</p>
+				</div>
 			</div>
-		</div>
-		<hr />
-		<div class="footer-section w-full flex flex-col sm:flex-row gap-4 justify-between items-center">
-			<p class="footer-name">
-				{$t('footer.sections.3.title')}
-			</p>
-			<img draggable="false" src="/images/arrow_sm.svg" class="rotate-90 sm:rotate-0 w-6 object-contain select-none transition-all duration-300" alt="" />
-			<div class="sm:w-80 flex flex-col justify-center items-center sm:items-end">
-				<a class="footer-link" target="_blank" href={`${$t('footer.sections.3.paragraphs.2')}`}>{$t('footer.sections.3.paragraphs.1')}</a>
-				<a class="footer-link" target="_blank" href={`${$t('footer.sections.3.paragraphs.4')}`}>{$t('footer.sections.3.paragraphs.3')}</a>
+			<hr />
+			<div class="w-full flex flex-col sm:flex-row gap-4 justify-between items-center">
+				<p class="footer-name">
+					{$t('footer.sections.2.title')}
+				</p>
+				<img draggable="false" src="/images/arrow_sm.svg" class="rotate-90 sm:rotate-0 w-6 object-contain select-none transition-all duration-300" alt="" />
+				<div class="sm:w-80 flex flex-col justify-center items-center sm:items-end">
+					<a class="footer-link longer" href={`mailto:${$t('footer.sections.2.paragraphs.1').toLowerCase()}`}>{$t('footer.sections.2.paragraphs.1')}</a>
+				</div>
+			</div>
+			<hr />
+			<div class="w-full flex flex-col sm:flex-row gap-4 justify-between items-center">
+				<p class="footer-name">
+					{$t('footer.sections.3.title')}
+				</p>
+				<img draggable="false" src="/images/arrow_sm.svg" class="rotate-90 sm:rotate-0 w-6 object-contain select-none transition-all duration-300" alt="" />
+				<div class="sm:w-80 flex flex-col justify-center items-center sm:items-end">
+					<a class="footer-link" target="_blank" href={`${$t('footer.sections.3.paragraphs.2')}`}>{$t('footer.sections.3.paragraphs.1')}</a>
+					<a class="footer-link" target="_blank" href={`${$t('footer.sections.3.paragraphs.4')}`}>{$t('footer.sections.3.paragraphs.3')}</a>
+				</div>
 			</div>
 		</div>
 	</footer>
