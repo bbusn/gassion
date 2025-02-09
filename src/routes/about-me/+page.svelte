@@ -49,8 +49,8 @@
     <h1 class="w-full text-left">{$t('about_me.title')}</h1>
     <hr />
     <section class="w-full flex items-center justify-center sm:justify-between gap-6 flex-wrap sm:flex-nowrap">
-        <div class="h-[65vh] sm:h-[60vh] mt-4 flex justify-center rounded-sm">
-            <img draggable="false" src="/images/about_me.png" class="grayscale hover:grayscale-0 w-full h-full object-contain select-none transition-all duration-500" alt="" />
+        <div class="h-[65vh] sm:h-[60vh] sm:mt-2 flex justify-center rounded-sm">
+            <img draggable="false" src="/images/about_me.png" class="sm:grayscale sm:hover:grayscale-0 w-full h-full object-contain select-none transition-all duration-500" alt="" />
         </div>
         <div class="w-full sm:w-1/2 flex flex-col items-center sm:items-end justify-center gap-4">
             <h2 class="text-center sm:text-right">{$t('about_me.sections.1.title')}</h2>

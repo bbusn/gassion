@@ -95,8 +95,7 @@
         @apply bg-black h-[1.5px] w-[99.5%];
     }
     .project-card {
-        filter: grayscale(100%);
-        @apply scale-100 lg:max-w-[430px] w-full cursor-pointer bg-squeleton-400 transition-all duration-200 hover:duration-200 hover:transition-all;
+        @apply sm:grayscale scale-100 lg:max-w-[430px] w-full cursor-pointer bg-squeleton-400 transition-all duration-200 hover:duration-200 hover:transition-all;
     }
     .project-card img {
         @apply transition-all duration-200 hover:duration-200 hover:transition-all;
