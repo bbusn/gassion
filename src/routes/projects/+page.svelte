@@ -9,8 +9,6 @@
     onMount(() => {
         const title = document.querySelector("h1") as HTMLHeadingElement;
 
-        const sections = document.querySelectorAll("section");
-
         const titleObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -23,22 +21,6 @@
             });
         }, { threshold: 0.1 });
 
-        sections.forEach((section, index) => {
-            const sectionObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    gsap.fromTo(section, 
-                        { opacity: 0, y: -50 }, 
-                        { opacity: 1, y: 0, duration: 1, delay: 0.8 + 0.2 * index }
-                        );
-                    }
-                    sectionObserver.unobserve(entry.target);
-                });
-            }, { threshold: 0.1 });
-
-            sectionObserver.observe(section);
-        });
-        
         titleObserver.observe(title);
 
         const tl = gsap.timeline({
@@ -74,7 +56,7 @@
 <div class="px-8 sm:px-12 lg:px-24 w-full flex flex-col justify-start items-start gap-16">
     <h1 id="#title">{$t('projects.title')}</h1>
     <hr />
-    <section class="w-full flex flex-col items-center justify-center gap-6">
+    <div class="w-full flex flex-col items-center justify-center gap-6">
         <div class="mt-4 flex flex-col justify-start items-start w-full">
             <div class="my-6 flex justify-between gap-5 items-start w-full flex-wrap lg:flex-nowrap">
                 <div class="w-full flex justify-center 2xl:gap-12 gap-8 lg:gap-5 items-center flex-col h-full flex-wrap">
@@ -112,5 +94,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>	
