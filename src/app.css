@@ -53,6 +53,11 @@
         text-align: center;
         font: inherit;
     }
+    header, section {
+        opacity: 0;
+        transform: translateY(-50px);
+        will-change: opacity, transform;
+    }
 }
 
 @layer components {
@@ -63,7 +68,7 @@
     .link:hover, .footer-link:hover {
         box-shadow: inset 150px 0 0 0 #ececec;
     }
-    .footer-link.longer:hover {
+    .footer-link.longer:hover, .link.longer:hover {
         box-shadow: inset 350px 0 0 0 #ececec;
     }
     .footer-link {
@@ -73,7 +78,9 @@
         @apply leading-none text-4xl font-primary sm:w-24;
     }
     h1 {
-        /* @apply text-8xl font-primary; */
+        opacity: 0;
+        transform: translateY(-50px);
+        will-change: opacity, transform;
         @apply text-7xl xs:text-8xl sm:text-9xl font-primary;
     }
     h2 {
@@ -91,5 +98,8 @@
     }
     .footer-section {
         @apply opacity-0 translate-y-[50px];
+    }
+    .project-image {
+        @apply transition-all duration-300 cursor-pointer hover:duration-300 hover:transition-all hover:grayscale-0 grayscale;
     }
 }

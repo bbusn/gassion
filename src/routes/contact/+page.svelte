@@ -1,5 +1,43 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+    import { gsap } from "gsap";
 	import { t } from '../../lib/i18n';
+
+    onMount(() => {
+        const title = document.querySelector("h1") as HTMLHeadingElement;
+
+        const sections = document.querySelectorAll("section");
+
+        const titleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                gsap.fromTo(title, 
+                    { opacity: 0, y: -50 }, 
+                    { opacity: 1, y: 0, duration: 1, delay: 0.4 }
+                    );
+                }
+                titleObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach((section, index) => {
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    gsap.fromTo(section, 
+                        { opacity: 0, y: -50 }, 
+                        { opacity: 1, y: 0, duration: 1, delay: 0.8 + 0.2 * index }
+                        );
+                    }
+                    sectionObserver.unobserve(entry.target);
+                });
+            }, { threshold: 0.1 });
+
+            sectionObserver.observe(section);
+        });
+
+        titleObserver.observe(title);
+    })
 </script>
 
 <svelte:head>
