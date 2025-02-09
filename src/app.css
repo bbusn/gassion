@@ -3,6 +3,32 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+    body {
+        --sb-track-color: #ffffff;
+        --sb-thumb-color: #ababab;
+        --sb-size: 8px;
+    }
+    
+    body::-webkit-scrollbar {
+    width: var(--sb-size);
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: var(--sb-track-color);
+        border-radius: 1px;
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background: var(--sb-thumb-color);
+        border-radius: 1px;
+    }
+    
+    @supports not selector(::-webkit-scrollbar) {
+        body {
+            scrollbar-color: var(--sb-thumb-color)
+                            var(--sb-track-color);
+        }
+    }
     *::selection {
         @apply bg-secondary-200 text-primary;
     }
@@ -22,10 +48,58 @@
         font-weight: bold;
         font-style: normal;
     }
+
+    option {
+        text-align: center;
+        font: inherit;
+    }
+    header, section {
+        opacity: 0;
+        transform: translateY(-50px);
+        will-change: opacity, transform;
+    }
 }
 
 @layer components {
     .link {
-        @apply text-primary font-primary transition-all duration-300 hover:bg-secondary-200 hover:transition-all hover:duration-300 active:text-gray-700 active:transition-all active:duration-300 active:scale-95;
+        box-shadow: inset 0 0 0 0 #ececec;
+        @apply cursor-pointer hover:text-gray-700 px-1 text-primary font-primary transition-all duration-300 hover:transition-all hover:duration-300 active:text-gray-700 active:transition-all active:duration-300 active:scale-95;
+    }
+    .link:hover, .footer-link:hover {
+        box-shadow: inset 150px 0 0 0 #ececec;
+    }
+    .footer-link.longer:hover, .link.longer:hover {
+        box-shadow: inset 350px 0 0 0 #ececec;
+    }
+    .footer-link {
+        @apply cursor-pointer text-primary font-secondary transition-all duration-300 hover:transition-all hover:duration-300 active:text-gray-700 active:transition-all active:duration-300 active:scale-95;
+    }
+    .footer-name {
+        @apply leading-none text-4xl font-primary sm:w-24;
+    }
+    h1 {
+        opacity: 0;
+        transform: translateY(-50px);
+        will-change: opacity, transform;
+        @apply text-7xl xs:text-8xl sm:text-9xl font-primary;
+    }
+    h2 {
+        @apply text-5xl font-primary;
+    }
+    hr {
+        @apply bg-black h-[1.5px] w-[99.5%];
+    }
+    .project-card {
+        filter: grayscale(100%);
+        @apply scale-100 lg:max-w-[430px] w-full cursor-pointer bg-squeleton-400 transition-all duration-200 hover:duration-200 hover:transition-all;
+    }
+    .project-card img {
+        @apply transition-all duration-200 hover:duration-200 hover:transition-all;
+    }
+    .footer-section {
+        @apply opacity-0 translate-y-[50px];
+    }
+    .project-image {
+        @apply transition-all duration-300 cursor-pointer hover:duration-300 hover:transition-all hover:grayscale-0 grayscale;
     }
 }
