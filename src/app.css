@@ -48,7 +48,11 @@
         font-weight: bold;
         font-style: normal;
     }
-    
+
+    option {
+        text-align: center;
+        font: inherit;
+    }
 }
 
 @layer components {

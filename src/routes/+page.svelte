@@ -4,9 +4,9 @@
     import ScrollTrigger from 'gsap/dist/ScrollTrigger';
     import { onMount } from "svelte";
 
-    gsap.registerPlugin(ScrollTrigger);
-
     onMount(() => {
+        gsap.registerPlugin(ScrollTrigger);
+        
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.project-card',
@@ -29,16 +29,6 @@
                 gsap.to(card, { filter:'grayscale(100%) brightness(0.8)', duration: 0.1 });
             });
         });
-
-        const crossElements = document.querySelectorAll('.cross') as NodeListOf<HTMLImageElement>;
-
-        crossElements.forEach((cross) => {
-            cross.addEventListener('click', () => {
-                cross.classList.toggle('rotate-[240deg]');
-            });
-        });
-
-
     });
 
 </script>

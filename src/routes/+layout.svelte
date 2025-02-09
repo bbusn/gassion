@@ -8,13 +8,18 @@
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
     let { children } = $props();
-
-    let langs = [
-        { value: 'en', name: 'English' },
-        { value: 'fr', name: 'Français' },
-    ];
+	
+	function getFlag(locale: string) {
+		const region = (locale ?? '').split('-').pop()?.toUpperCase() ?? '';
+		
+		return region
+		.split('')
+		.map((char: string) => String.fromCodePoint(char.charCodeAt(0) + 127397))
+		.join('');
+	}
 
     onMount(async () => {
+		
 		const lenis = new Lenis({
 			duration: 3,
 			easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
@@ -108,11 +113,14 @@
 				<a class="link" href="/projects">{$t('header.navigation.2')}</a>
 				<a class="link" href="/contact">{$t('header.navigation.3')}</a>
 			</nav>
+
 			<select bind:value={$locale}>
 				{#each $locales as l}
-				  <option value={l}>{l}</option>
+				  <option value={l} data-locale={l}>
+					{getFlag(l)}
+				  </option>
 				{/each}
-			</select>
+			  </select>
 		</div>
 	</header>
 
