@@ -117,7 +117,13 @@
         </div>
         {/if}
     {:else}
-    <p>Loading...</p>
+        <hr />
+        <div class="my-6 w-full flex flex-col items-start justify-center gap-6">
+            <div class="h-[40vh] sm:h-[35vh] flex justify-center items-center bg-squeleton-300 animate-pulse w-full rounded-sm transition-all duration-300">
+                <div class="w-16 h-16 border-2 border-gray-200 border-t-gray-500 rounded-full animate-spin"></div>
+            </div>
+            <p class="max-w-[100%] text-center text-xl sm:text-2xl font-secondary">{$t('projects.loading')}</p>
+        </div>
     {/if}
 {/key}
 </div>
