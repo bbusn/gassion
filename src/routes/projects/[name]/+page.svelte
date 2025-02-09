@@ -97,7 +97,7 @@
             </div>  
             {/if}
         </div>
-        <div class="w-full flex justify-between items-start gap-4 flex-wrap">
+        <div class="w-full flex justify-center sm:justify-between items-start gap-4 flex-wrap">
             {#if data.images}  
                 {#each Object.keys(data.images) as key}
                     <div class="flex flex-col justify-start items-center gap-3">
@@ -110,7 +110,7 @@
             {/if} 
         </div>
         {#if data.link} 
-        <div class="w-full flex justify-center items-center gap-4">
+        <div class="mt-6 w-full flex justify-center items-center gap-4">
             <a href={$t(`projects.${id}.link.url`)} target="_blank" rel="noopener noreferrer" class="link text-6xl longer">
                 {$t(`projects.${id}.link.text`)}
             </a>
