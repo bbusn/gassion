@@ -83,7 +83,7 @@
             {/if}
             {#if data.main_video}
                 <!-- svelte-ignore a11y_media_has_caption -->
-                <video height={data.main_video.height} width={data.main_video.width} controls class="w-full sm:w-auto mb-6 sm:mb-0 object-contain select-none transition-all duration-500">
+                <video height={data.main_video.height} width={data.main_video.width} controls class="mb-6 sm:mb-0 object-contain select-none transition-all duration-500">
                     <source src={`/images/projects/${id}/main.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
