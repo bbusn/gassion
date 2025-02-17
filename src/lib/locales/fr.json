@@ -120,14 +120,14 @@
             "subtitle" : "identité visuelle - Bekar",
             "description": "Passionné de musique depuis mon plus jeune âge, et plus particulièrement de musique urbaine, j'ai imaginé l'identité visuelle du rappeur Bekar dans un projet fictif.",
             "main_image": {
-                "width": 500,
-                "height": 500,
+                "width": 400,
+                "height": 400,
                 "description": "LOGO BEKAR",
                 "alt": "LOGO BEKAR"
             },
             "main_video": {
-                "width": 500,
-                "height": 500,
+                "width": 400,
+                "height": 400,
                 "description": "Image 1",
                 "alt": "image_1"
             },
