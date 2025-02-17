@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { t } from '../lib/i18n';
     import gsap from 'gsap';
-    import ScrollTrigger from 'gsap/dist/ScrollTrigger';
     import { onMount } from "svelte";
 
     onMount(() => {
@@ -39,22 +38,6 @@
         
         titleObserver.observe(title);
 
-        gsap.registerPlugin(ScrollTrigger);
-        
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.project-card',
-                start: 'top+=300 bottom',
-                end: 'bottom center',
-                scrub: true
-            }
-        });
-
-        tl.to('.project-card', {
-            stagger: 0.2,
-            y: -100,
-        });
-
         document.querySelectorAll('.project-card').forEach((card) => {
             card.addEventListener('mouseenter', () => {
                 gsap.to(card, { filter:'grayscale(50%) brightness(1)', duration: 0.1 });
@@ -63,8 +46,26 @@
                 gsap.to(card, { filter:'grayscale(100%) brightness(0.8)', duration: 0.1 });
             });
         });
-    });
 
+        const setCrossImgs = () => {
+			let crossElements = document.querySelectorAll('.cross');
+
+			if (!crossElements || crossElements.length < 1) {
+				setTimeout(() => {
+					setCrossImgs()
+				}, 2000);
+				return
+			}
+
+			crossElements.forEach((cross) => {
+				cross.addEventListener('mouseover', () => {
+					cross.classList.toggle('rotate-[240deg]');
+				});
+			});    
+		}
+
+		setCrossImgs();
+    });
 </script>
 
 <svelte:head>
@@ -98,26 +99,26 @@
             <div class="my-6 flex justify-between gap-5 items-start w-full flex-wrap lg:flex-nowrap">
                 <div class="w-full flex justify-center 2xl:gap-12 gap-8 lg:gap-5 items-center flex-col h-full flex-wrap">
                     <a aria-label='project' href={`/projects/1-${$t('projects.1.slug')}`} class="h-[600px] load-group-1 project-card">
-                        <img draggable="false" src="/images/projects/1.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
+                        <img draggable="false" src="/images/projects/1/main.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
                     </a>
                     <a aria-label='project' href={`/projects/4-${$t('projects.4.slug')}`} class="h-[400px] load-group-2 project-card">
-                        <img draggable="false" src="/images/projects/4.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
+                        <img draggable="false" src="/images/projects/4/main.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
                     </a>
                 </div>
                 <div class="w-full flex justify-center gap-8 lg:gap-5 2xl:gap-12 items-center flex-col h-full flex-wrap">
                     <a aria-label='project' href={`/projects/2-${$t('projects.2.slug')}`} class="h-[400px] load-group-1 project-card">
-                        <img draggable="false" src="/images/projects/2.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
+                        <img draggable="false" src="/images/projects/2/main.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
                     </a>
                     <a aria-label='project' href={`/projects/5-${$t('projects.5.slug')}`} class="h-[450px] load-group-2 project-card">
-                        <img draggable="false" src="/images/projects/5.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
+                        <img draggable="false" src="/images/projects/5/main.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
                     </a>
                 </div>
                 <div class="w-full flex justify-center gap-8 lg:gap-5 2xl:gap-12 items-center flex-col h-full flex-wrap">
                     <a aria-label='project' href={`/projects/3-${$t('projects.3.slug')}`} class="h-[600px] load-group-1 project-card">
-                        <img draggable="false" src="/images/projects/3.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
+                        <img draggable="false" src="/images/projects/3/main.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
                     </a>
                     <a aria-label='project' href={`/projects/6-${$t('projects.6.slug')}`} class="h-[400px] load-group-2 project-card">
-                        <img draggable="false" src="/images/projects/6.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
+                        <img draggable="false" src="/images/projects/6/main.png" class="select-none transition-all duration-600 w-full h-full object-cover" alt="" />
                     </a>
                 </div>
             </div>
@@ -128,4 +129,5 @@
             </div>  
         </div>
     </div>
+    
 </div>	

@@ -6,21 +6,21 @@
     import { onMount } from 'svelte';
 
     const id = page.params.name.split('-')[0];
+
     interface ProjectData {
         main_image: {
-            src: string;
             alt: string;
             width: number;
             height: number;
         },
+        images_container: string,
         main_video: {
-            src: string;
             alt: string;
             width: number;
             height: number;
         },
         images: { [key: string]: { 
-            src: string; 
+            name: string; 
             alt: string; 
             width: number;
             height: number;
@@ -29,7 +29,10 @@
         title: string;
         subtitle: string;
         description: string;
-        link: string;
+        link: {
+            "url": string;
+            "text": string;
+        };
     }
     
     let data: ProjectData | null = null;
@@ -76,12 +79,12 @@
         <hr />
         <div class="my-6 w-full flex items-start justify-center sm:justify-between gap-6 flex-wrap sm:flex-nowrap">
             {#if data.main_image}
-                <img draggable="false" src={data.main_image.src}  height={data.main_image.height} width={data.main_image.width}  class="project-image object-cover select-none transition-all duration-500" alt={data.main_image.alt} />
+                <img draggable="false" src={`/images/projects/${id}/main.png`}  height={data.main_image.height} width={data.main_image.width}  class="project-image object-cover select-none transition-all duration-500" alt={data.main_image.alt} />
             {/if}
             {#if data.main_video}
                 <!-- svelte-ignore a11y_media_has_caption -->
                 <video controls class="w-full mb-6 sm:mb-0 h-full object-contain select-none transition-all duration-500">
-                    <source src={data.main_video.src} type="video/mp4" />
+                    <source src={`/images/projects/${id}/main.mp4`} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             {/if}
@@ -97,11 +100,11 @@
             </div>  
             {/if}
         </div>
-        <div class="w-full flex justify-center sm:justify-between items-start gap-8 sm:gap-5 flex-wrap">
+        <div class={`w-full flex justify-center ${data.images_container ?? 'start'} items-start gap-8 sm:gap-5 flex-wrap`}>
             {#if data.images}  
                 {#each Object.keys(data.images) as key}
                     <div class="flex flex-col justify-start items-center gap-3">
-                        <img class="project-image rounded-sm object-cover w-[80vw] sm:w-auto" src={data.images[key].src} alt={data.images[key].alt} height={data.images[key].height} width={data.images[key].width} />
+                        <img class="project-image rounded-sm object-cover" src={`/images/projects/${id}/${data.images[key].name}`} alt={data.images[key].alt} height={data.images[key].height} width={data.images[key].width} />
                         {#if data.images[key].description}
                             <p class="text-center italic">{data.images[key].description}</p>
                         {/if}

@@ -58,6 +58,32 @@
         transform: translateY(-50px);
         will-change: opacity, transform;
     }
+    @media (min-width: 640px) {
+        .start {
+          justify-content: flex-start !important;
+        }
+      
+        .center {
+          justify-content: center !important;
+        }
+      
+        .end {
+          justify-content: flex-end !important;
+        }
+      
+        .between {
+          justify-content: space-between !important;
+        }
+      
+        .around {
+          justify-content: space-around !important;
+        }
+      
+        .evenly {
+          justify-content: space-evenly !important;
+        }
+    }
+      
 }
 
 @layer components {
@@ -95,7 +121,7 @@
         @apply bg-black h-[1.5px] w-[99.5%];
     }
     .project-card {
-        @apply sm:grayscale scale-100 lg:max-w-[430px] w-full cursor-pointer bg-squeleton-400 transition-all duration-200 hover:duration-200 hover:transition-all;
+        @apply hover:-translate-y-[20px] sm:grayscale scale-100 lg:max-w-[430px] w-full cursor-pointer bg-squeleton-400 transition-all duration-200 hover:duration-200 hover:transition-all;
     }
     .project-card img {
         @apply transition-all duration-200 hover:duration-200 hover:transition-all;

@@ -8,14 +8,15 @@
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
     let { children } = $props();
-	
+
 	function getFlag(locale: string) {
-		const region = (locale ?? '').split('-').pop()?.toUpperCase() ?? '';
+		return locale;
+		// const region = (locale ?? '').split('-').pop()?.toUpperCase() ?? '';
 		
-		return region
-		.split('')
-		.map((char: string) => String.fromCodePoint(char.charCodeAt(0) + 127397))
-		.join('');
+		// return region
+		// .split('')
+		// .map((char: string) => String.fromCodePoint(char.charCodeAt(0) + 127397))
+		// .join('');
 	}
 
     onMount(async () => {
@@ -75,18 +76,11 @@
 		}, { threshold: 0 });
 
 		footerObserver.observe(footer);
-
-        
-        const crossElements = document.querySelectorAll('.cross') as NodeListOf<HTMLImageElement>;
-        crossElements.forEach((cross) => {
-            cross.addEventListener('mouseenter', () => {
-                cross.classList.toggle('rotate-[240deg]');
-            });
-        });
     });
 </script>
 
 <main class="pt-2 pb-24 bg-white min-h-screen max-w-screen overflow-x-hidden overflow-y-auto flex flex-col items-center justify-start gap-4">
+
 	<header class="opacity-0 px-6 lg:px-8 w-full py-2 lg:py-4 flex items-start justify-between h-28">
 		<a class="link text-6xl flex items-center justify-center" href="/">
 			<p>{$t('header.title')}</p>
@@ -98,9 +92,9 @@
 				<a class="link" href="/contact">{$t('header.navigation.3')}</a>
 			</nav>
 
-			<select bind:value={$locale}>
+			<select class="px-2 font-semibold uppercase" bind:value={$locale}>
 				{#each $locales as l}
-				  <option value={l} data-locale={l}>
+				  <option class="px-2 font-semibold uppercase" value={l} data-locale={l}>
 					{getFlag(l)}
 				  </option>
 				{/each}
