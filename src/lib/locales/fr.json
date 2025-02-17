@@ -126,8 +126,8 @@
                 "alt": "LOGO BEKAR"
             },
             "main_video": {
-                "width": 700,
-                "height": 700,
+                "width": 500,
+                "height": 500,
                 "description": "Image 1",
                 "alt": "image_1"
             },
