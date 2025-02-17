@@ -52,8 +52,8 @@
             "1": {
                 "title": "À PROPOS",
                 "paragraphs" : {
-                    "1": "FRENCH Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab!  Libero illum corrupti totam asperiores eaque. Ratione, delectus aperiam? Hic dignissimos earum voluptates totam quis autem. Aut, repellat sequi. Quod, rem dolorem.",
-                    "2": "FRENCH Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ut aspernatur quidem totam, sunt eum?"
+                    "1": "Bonjour, moi c'est Quentin, Designer Graphique passionné par l'image et la vidéo, je créer et donne vie à mes idées à travers des visuels uniques. Que ce soit en graphisme, motion design ou vidéo, je cherche à rendre chaque projet unique et créatif.",
+                    "2": "Animé par une curiosité constante, je cherche à repousser mes limites pour enrichir mes créations et développer mon côté artistique. Chaque projet est pour moi une opportunité d'expérimenter et d'explorer une nouvelle approche du design."
                 }
             },
             "2": {
@@ -86,7 +86,6 @@
                 "paragraphs" : {
                     "1": "Vous avez un projet en tête ou besoin de services spécifiques ?",
                     "2": "Que ce soit pour une collaboration, une mission freelance ou toute autre demande, je suis disponible pour en discuter."
-
                 }
             },
             "2": {
@@ -114,57 +113,93 @@
         "title": "GALERIE DE PROJETS",
         "1": {
             "meta": {
-                "title": "Photos voiture"
+                "title": "Bekar Pop Urbaine"
             },
-            "title": "PHOTOS RANDOM",
-            "slug": "photos-random",
-            "subtitle" : "SÉRIE DE PHOTOS",
-            "description": "C'est juste une petite compil perso de photos aléatoires genre mes chaussettes un peu tu connais mon gars. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus eveniet necessitatibus et dicta ipsum obcaecati quae architecto, aperiam doloribus laboriosam hic provident odit eaque, dolorem earum corrupti voluptate ad ab!  Libero illum corrupti totam asperiores eaque. Ratione, delectus aperiam? Hic dignissimos earum voluptates totam quis autem. Aut, repellat sequi. Quod, rem dolorem.",
+            "title": "identité visuelle - Bekar",
+            "slug": "identite-bekar",
+            "subtitle" : "identité visuelle - Bekar",
+            "description": "Passionné de musique depuis mon plus jeune âge, et plus particulièrement de musique urbaine, j'ai imaginé l'identité visuelle du rappeur Bekar dans un projet fictif.",
             "main_image": {
-                "src": "/images/projects/1.png",
-                "width": 300,
-                "height": 200,
-                "description": "Image 1",
-                "alt": "image_1"
+                "width": 500,
+                "height": 500,
+                "description": "LOGO BEKAR",
+                "alt": "LOGO BEKAR"
             },
             "main_video": {
-                "src": "/images/projects/video.mp4",
-                "width": 300,
-                "height": 200,
+                "width": 700,
+                "height": 700,
                 "description": "Image 1",
                 "alt": "image_1"
             },
-            "link": {
-                "url": "https://coquinou.fr",
-                "text": "VOIR LE SITE"
-            },
-            "images": {
-                "1": {
-                    "src": "https://picsum.photos/200/300",
-                    "width": 200,
-                    "height": 300,
-                    "description": "Image 1",
-                    "alt": "image_1"
+            "images": [
+                {
+                    "name": "LOGO_BEKAR.png",
+                    "alt": "Image 1",
+                    "class": "project-image-class",
+                    "width": 300,
+                    "height": 300
                 },
-                "2": {
-                    "src": "https://picsum.photos/200/300",
-                    "width": 200,
-                    "height": 300,
-                    "alt": "image_2"
+                {
+                    "name": "LOGO_BEKAR_COLOR.png",
+                    "alt": "Image 2",
+                    "class": "project-image-class",
+                    "width": 300,
+                    "height": 300
                 },
-                "3": {
-                    "src": "https://picsum.photos/200/300",
-                    "width": 200,
-                    "height": 300,
-                    "alt": "image_3"
-                },
-                "4": {
-                    "src": "https://picsum.photos/200/300",
-                    "width": 200,
-                    "height": 300,
-                    "alt": "image_4"
+                {
+                    "name": "logoo.png",
+                    "alt": "Image 2",
+                    "class": "project-image-class",
+                    "width": 300,
+                    "height": 300
                 }
+            ],
+            "images_container": "start",
+            "layout": {
+                "type": "flex",
+                "justify_content": "space-between",
+                "align_items": "center",
+                "gap": "10px"
+            },
+            "link": {
+                "url": "https://pornhub.com",
+                "text": "VISITER PORNHUB"
             }
+        },
+        "3": {
+            "meta": {
+                "title": "Millions d'flowerz"
+            },
+            "title": "Shooting - Millions d'flowerz",
+            "slug": "Millions d'flowerz",
+            "subtitle": "Shooting - Millions d'flowerz",
+            "description": "Passionné par la création visuelle et le design graphique, j'ai imaginé l'identité visuelle pour le projet fictif 'Project X', un projet innovant alliant modernité et créativité.",
+            "main_image": {
+                "width": 500,
+                "height": 500
+            },
+            "images": [
+               
+                {
+                    "name": "2.png",
+                    "alt": "Image 2",
+                    "width": 300,
+                    "height": 300
+                },
+                {
+                    "name": "3.jpg",
+                    "alt": "Image 2",
+                    "width": 300,
+                    "height": 300
+                },
+                {
+                    "name": "4.png",
+                    "alt": "Image 2",
+                    "width": 300,
+                    "height": 300
+                }
+            ],
+            "images_container": "start"
         }
     },
     "errors": {
@@ -183,4 +218,4 @@
             "message": "Désolé, une erreur s'est produite. Veuillez réessayer plus tard."
         }
     }
-}  
+}
